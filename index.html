@@ -1,96 +1,101 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dansk Udendørsservice</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dansk Udendørsservice</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-<header>
-  <div class="logo-container">
-    <img src="logo.png" alt="Dansk Udendørsservice Logo" class="logo-img" />
-    <div class="logo-text">Dansk Udendørsservice</div>
-  </div>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Dansk Udendørsservice Logo" class="logo-img" />
+      <span class="logo-text">Dansk Udendørsservice</span>
+    </div>
+    <nav id="primary-navigation" aria-label="Primær navigation">
+      <ul>
+        <li><a href="#forside">Forside</a></li>
+        <li><a href="#om">Om os</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#priser">Priser</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav id="primary-navigation">
-    <ul>
-      <li><a href="#forside">Forside</a></li>
-      <li><a href="#om">Om os</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#priser">Priser</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
-</header>
-
-
-    <section class="hero" id="forside">
-        <div class="overlay">
-            <h1>Professionel haveservice</h1>
-            <p>Vi passer din have, så du kan nyde den.</p>
-        </div>
+  <main>
+    <section class="hero" id="forside" aria-labelledby="hero-title">
+      <div class="overlay">
+        <h1 id="hero-title">Professionel haveservice</h1>
+        <p>Vi passer din have, så du kan nyde den.</p>
+      </div>
     </section>
 
-    <section id="om">
-        <h2>Hvem er vi?</h2>
-        <p>Dansk Udendørsservice tilbyder havearbejde og vedligeholdelse for private og virksomheder i hele Danmark. Vi er eksperter i græsslåning, hækklipning, ukrudtsbekæmpelse og generel pleje af grønne områder.</p>
+    <section id="om" aria-labelledby="om-title">
+      <h2 id="om-title">Hvem er vi?</h2>
+      <p>Dansk Udendørsservice tilbyder havearbejde og vedligeholdelse for private og virksomheder i hele Danmark. Vi er eksperter i græsslåning, hækklipning, ukrudtsbekæmpelse og generel pleje af grønne områder.</p>
     </section>
 
-    <section id="team">
-        <h2>Teamet</h2>
-        <div class="team-container">
-            <div class="member">
-                <h3>Liam</h3>
-                <p>Direktør</p>
-            </div>
-            <div class="member">
-                <h3>Mads</h3>
-                <p>Direktør</p>
-            </div>
-        </div>
+    <section id="team" aria-labelledby="team-title">
+      <h2 id="team-title">Teamet</h2>
+      <div class="team-container">
+        <article class="member">
+          <h3>Liam</h3>
+          <p>Direktør</p>
+        </article>
+        <article class="member">
+          <h3>Mads</h3>
+          <p>Direktør</p>
+        </article>
+      </div>
     </section>
 
-    <section id="priser">
-        <h2>Priser</h2>
-        <ul>
-            <li><strong>Græsslåning:</strong> fra 200 kr.</li>
-            <li><strong>Hækklipning:</strong> fra 300 kr.</li>
-            <li><strong>Ukrudtsbekæmpelse:</strong> fra 250 kr.</li>
-            <li><strong>Fast haveaftale:</strong> Kontakt for tilbud</li>
-        </ul>
+    <section id="priser" aria-labelledby="priser-title">
+      <h2 id="priser-title">Priser</h2>
+      <ul>
+        <li><strong>Græsslåning:</strong> fra 200 kr.</li>
+        <li><strong>Hækklipning:</strong> fra 300 kr.</li>
+        <li><strong>Ukrudtsbekæmpelse:</strong> fra 250 kr.</li>
+        <li><strong>Fast haveaftale:</strong> Kontakt for tilbud</li>
+      </ul>
     </section>
 
-    <section id="kontakt">
-        <h2>Kontakt os</h2>
-        <p><strong>Email:</strong> danskudservice@gmail.com</p>
-        <p><strong>Telefon:</strong> +45 60 56 98 45</p>
-        <p><strong>Adresse:</strong> Ukendt</p>
-        <p><strong>Åbningstider:</strong> Man - Fre: 08:00 - 17:00</p>
+    <section id="kontakt" aria-labelledby="kontakt-title">
+      <h2 id="kontakt-title">Kontakt os</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:danskudservice@gmail.com">danskudservice@gmail.com</a></li>
+        <li><strong>Telefon:</strong> <a href="tel:+4560569845">+45 60 56 98 45</a></li>
+        <li><strong>Adresse:</strong> Ukendt</li>
+        <li><strong>Åbningstider:</strong> Man - Fre: 08:00 - 17:00</li>
+      </ul>
     </section>
+  </main>
 
-    <footer>
-        <div class="footer-logo-container">
-            <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img" />
-        </div>
-        <p>© 2025 Dansk Udendørsservice – Alle rettigheder forbeholdes</p>
-        <p>CVR: Ukendt · Ukendt</p>
-        <p><a href="privatlivspolitik.html">Privatlivspolitik</a> · <a href="cookie-policy.html">Cookiepolitik</a></p>
-    </footer>
+  <footer>
+    <div class="footer-logo-container">
+      <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img" />
+    </div>
+    <p>© 2025 Dansk Udendørsservice – Alle rettigheder forbeholdes</p>
+    <p>CVR: Ukendt · Ukendt</p>
+    <p>
+      <a href="privatlivspolitik.html">Privatlivspolitik</a> · 
+      <a href="cookie-policy.html">Cookiepolitik</a>
+    </p>
+  </footer>
 
-<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
     <p id="cookieText">
-        Vi bruger cookies for at forbedre din oplevelse – 
-        <a href="cookie-policy.html">Læs vores Cookie & Privacy Policy.</a>
+      Vi bruger cookies for at forbedre din oplevelse –
+      <a href="cookie-policy.html">Læs vores Cookie & Privacy Policy.</a>
     </p>
     <div class="cookie-buttons">
-        <button onclick="acceptCookies()">Tillad cookies</button>
-        <button onclick="declineCookies()">Afvis cookies</button>
+      <button onclick="acceptCookies()">Tillad cookies</button>
+      <button onclick="declineCookies()">Afvis cookies</button>
     </div>
-</div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
