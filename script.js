@@ -20,3 +20,12 @@ function declineCookies() {
         "Du har afvist cookies. <a href='cookie-policy.html'>Læs om dine muligheder her.</a>";
     setTimeout(() => document.getElementById("cookieBanner").style.display = "none", 3000);
 }
+
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('primary-navigation');
+
+menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('active');
+});
