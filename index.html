@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dansk Udendørsservice</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Dansk Udendørsservice Logo" class="logo-img">
+            <img src="logo.png" alt="Dansk Udendørsservice Logo" class="logo-img" />
             <div class="logo-text">Dansk Udendørsservice</div>
         </div>
-        <nav>
+
+        <!-- Mobil hamburger menu knap -->
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
+            &#9776; <!-- simpel hamburger ikon -->
+        </button>
+
+        <nav id="primary-navigation">
             <ul>
                 <li><a href="#forside">Forside</a></li>
                 <li><a href="#om">Om os</a></li>
@@ -70,10 +75,9 @@
         <p><strong>Åbningstider:</strong> Man - Fre: 08:00 - 17:00</p>
     </section>
 
-    
     <footer>
         <div class="footer-logo-container">
-            <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img">
+            <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img" />
         </div>
         <p>© 2025 Dansk Udendørsservice – Alle rettigheder forbeholdes</p>
         <p>CVR: Ukendt · Ukendt</p>
