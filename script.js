@@ -24,3 +24,39 @@ function declineCookies() {
         document.getElementById("cookieBanner").style.display = "none";
     }, 3000);
 }
+
+window.onload = () => {
+    // Tjekker om brugeragenten indikerer mobiltelefon
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        const header = document.querySelector("header");
+        const logo = document.querySelector(".logo");
+        const navUl = document.querySelector("nav ul");
+        const navLinks = document.querySelectorAll("nav a");
+
+        if (header) {
+            header.style.flexDirection = "column";
+            header.style.alignItems = "center";
+            header.style.padding = "16px 20px";
+            header.style.gap = "20px";
+        }
+
+        if (logo) {
+            logo.style.fontSize = "1.5rem";
+        }
+
+        if (navUl) {
+            navUl.style.flexDirection = "column";
+            navUl.style.gap = "15px";
+            navUl.style.alignItems = "center";
+            navUl.style.width = "100%";
+        }
+
+        if (navLinks.length > 0) {
+            navLinks.forEach(link => {
+                link.style.fontSize = "1.1rem";
+            });
+        }
+    }
+};
