@@ -1,17 +1,15 @@
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
   const banner = document.getElementById("cookieBanner");
   const accepted = localStorage.getItem("cookiesAccepted");
 
-  // Vis cookie-banner hvis ikke accepteret/afvist endnu
   if (!accepted) {
     banner.style.display = "flex";
   } else {
     banner.style.display = "none";
   }
 
-  // Tjek om det er en mobil enhed
+  // Mobil tilpasning
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
   if (isMobile) {
     const header = document.querySelector("header");
     const logo = document.querySelector(".logo");
@@ -40,7 +38,8 @@ window.onload = () => {
       link.style.fontSize = "1.1rem";
     });
   }
-};
+});
+
 
 // Acceptér cookies
 function acceptCookies() {
