@@ -221,52 +221,87 @@ footer {
     width: auto;
 }
 
-/* Skjul menu-knap på desktop */
+/* === Menu toggle knap (hamburger) === */
 .menu-toggle {
-    font-size: 2.5rem;
-    background: none;
+    display: none; /* Skjult på desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
     border: none;
-    color: white;
     cursor: pointer;
-    display: none;
+    z-index: 2000;
 }
 
-/* Vis på mobil */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+    position: relative;
+}
 
-    /* Skjul navigation som standard på mobil */
-    nav#primary-navigation {
+/* Når menu er aktiv (knappen kryds) */
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+    position: relative;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -8px;
+    position: relative;
+}
+
+/* === Mobil navigation === */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
         display: none;
-        width: 100%;
         background-color: #0f172a;
         position: absolute;
-        top: 70px; /* Juster efter header højde */
-        left: 0;
-        padding: 10px 0;
-        border-radius: 0 0 12px 12px;
+        top: 72px; /* juster efter header-højde */
+        right: 0;
+        width: 200px;
+        border-radius: 0 0 0 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+    nav.active ul {
+        display: flex;
+    }
+    
+    header {
+        padding: 20px 20px;
+        position: relative;
+    }
+    
+    /* Vis menu toggle på mobil */
+    .menu-toggle {
+        display: flex;
+    }
+}
 
-    /* Når menu er aktiv, vises navigation */
-    nav#primary-navigation.active {
-        display: block;
-    }
+/* === Mobil design specifikt (kan udbygges) === */
+.mobile-design body, 
+.mobile-design header, 
+.mobile-design section, 
+.mobile-design footer {
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: #fff !important;
+    color: #0f172a !important;
+}
 
-    nav#primary-navigation ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-    }
-
-    nav#primary-navigation ul li {
-        text-align: center;
-    }
-
-    nav#primary-navigation a {
-        font-size: 1.2rem;
-        display: block;
-        padding: 10px 0;
-    }
+/* Eksempel: gør header mere kompakt på mobil-design */
+.mobile-design header {
+    padding: 15px 15px;
 }
