@@ -21,11 +21,27 @@ function declineCookies() {
     setTimeout(() => document.getElementById("cookieBanner").style.display = "none", 3000);
 }
 
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.getElementById('primary-navigation');
+document.addEventListener("DOMContentLoaded", function() {
+    // Find knap og navigation
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('primary-navigation');
 
-menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    nav.classList.toggle('active');
+    // Mobil-tjek funktion
+    function isMobile() {
+        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Popup hvis mobil og spørg om design-skift
+    if (isMobile()) {
+        if(confirm("Telefon registeret, vi kan se du er på mobiltelefon. Vil du skifte til telefon design?")) {
+            document.body.classList.add("mobile-design");
+        }
+    }
+
+    // Toggle menu ved klik på knap
+    menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('active');
+    });
 });
