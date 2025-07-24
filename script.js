@@ -21,27 +21,26 @@ function declineCookies() {
     setTimeout(() => document.getElementById("cookieBanner").style.display = "none", 3000);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Find knap og navigation
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.getElementById('primary-navigation');
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('primary-navigation');
 
-    // Mobil-tjek funktion
-    function isMobile() {
-        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
+menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('active');
+});
 
-    // Popup hvis mobil og spørg om design-skift
-    if (isMobile()) {
-        if(confirm("Telefon registeret, vi kan se du er på mobiltelefon. Vil du skifte til telefon design?")) {
-            document.body.classList.add("mobile-design");
+// Funktion til at tjekke om bruger er på mobil
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Popup til mobilbrugere
+window.addEventListener('load', () => {
+    if(isMobile()) {
+        const accept = confirm("Telefon registreret! Vi kan se, du er på mobiltelefon. Vil du skifte til telefon design?");
+        if(accept) {
+            document.body.classList.add('mobile-design');
         }
     }
-
-    // Toggle menu ved klik på knap
-    menuToggle.addEventListener('click', () => {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-        menuToggle.setAttribute('aria-expanded', !expanded);
-        nav.classList.toggle('active');
-    });
 });
