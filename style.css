@@ -261,8 +261,8 @@ footer {
     position: relative;
 }
 
-/* === Mobil navigation === */
-@media (max-width: 768px) {
+/* === Mobil og tablet navigation === */
+@media (max-width: 1024px) { /* Tablet og under */
     nav ul {
         flex-direction: column;
         gap: 0;
@@ -271,9 +271,10 @@ footer {
         position: absolute;
         top: 72px; /* juster efter header-højde */
         right: 0;
-        width: 200px;
+        width: 220px; /* lidt bredere på tablet */
         border-radius: 0 0 0 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 1500;
     }
     nav.active ul {
         display: flex;
@@ -284,7 +285,7 @@ footer {
         position: relative;
     }
     
-    /* Vis menu toggle på mobil */
+    /* Vis menu toggle på mobil og tablet */
     .menu-toggle {
         display: flex;
     }
@@ -300,6 +301,29 @@ footer {
     background-color: #fff !important;
     color: #0f172a !important;
 }
+
+/* Ekstra tablet-specifik styling */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* F.eks. lidt større menu-knap til tablet */
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+    }
+    .menu-toggle span {
+        height: 4px;
+    }
+    
+    nav ul {
+        width: 250px; /* bredere menu til tablet */
+    }
+    
+    /* Ændret padding og font-størrelse i mobile-design på tablet */
+    .mobile-design body {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}
+
 
 /* Eksempel: gør header mere kompakt på mobil-design */
 .mobile-design header {
