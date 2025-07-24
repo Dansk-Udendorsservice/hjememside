@@ -220,3 +220,53 @@ footer {
     height: 50px; /* Juster efter behov */
     width: auto;
 }
+
+/* Skjul menu-knap på desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Vis knap på mobil (max-width 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Skjul navigation som standard på mobil */
+    nav#primary-navigation {
+        display: none;
+        width: 100%;
+        background-color: #0f172a;
+        position: absolute;
+        top: 70px; /* Juster efter header højde */
+        left: 0;
+        padding: 10px 0;
+        border-radius: 0 0 12px 12px;
+    }
+
+    /* Når menu er aktiv, vises navigation */
+    nav#primary-navigation.active {
+        display: block;
+    }
+
+    nav#primary-navigation ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+    }
+
+    nav#primary-navigation ul li {
+        text-align: center;
+    }
+
+    nav#primary-navigation a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px 0;
+    }
+}
