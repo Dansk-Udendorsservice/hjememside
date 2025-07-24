@@ -9,19 +9,16 @@ window.onload = () => {
 
 function acceptCookies() {
     localStorage.setItem("cookiesAccepted", "true");
-    // Fjernet tekstopdatering
     document.getElementById("cookieBanner").style.display = "none";
 }
-
 
 function declineCookies() {
     localStorage.setItem("cookiesAccepted", "false");
     document.getElementById("cookieText").innerHTML =
         "Du har afvist cookies. <a href='cookie-policy.html'>Læs om dine muligheder her.</a>";
-    setTimeout(() => {
-        document.getElementById("cookieBanner").style.display = "none";
-    }, 3000);
+    document.getElementById("cookieBanner").style.display = "none";
 }
+
 
 window.onload = () => {
     // Tjekker om brugeragenten indikerer mobiltelefon
