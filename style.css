@@ -23,7 +23,6 @@ body {
   line-height: 1.6;
 }
 
-/* === Header === */
 header {
   background-color: var(--primary-bg);
   padding: 24px 60px;
@@ -80,9 +79,8 @@ nav a:hover {
   color: var(--link-hover);
 }
 
-/* === Hero Section === */
 .hero {
-  background-image: url("images/hero.jpg");
+  background-image: url("hero.jpg");
   background-size: cover;
   background-position: center;
   height: 450px;
@@ -109,7 +107,6 @@ nav a:hover {
   font-size: 1.3rem;
 }
 
-/* === Content Sections === */
 section {
   padding: 60px 40px;
   max-width: 1100px;
@@ -130,7 +127,6 @@ ul {
   list-style-type: disc;
 }
 
-/* === Team Section === */
 .team-container {
   display: flex;
   gap: 40px;
@@ -170,7 +166,6 @@ footer {
   width: auto;
 }
 
-/* === Cookie Banner === */
 .cookie-banner {
   position: fixed;
   bottom: 20px;
@@ -222,7 +217,6 @@ footer {
   background-color: #cbd5e1;
 }
 
-/* === Responsive === */
 @media (max-width: 768px) {
   header {
     flex-direction: column;

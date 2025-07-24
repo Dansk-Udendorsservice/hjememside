@@ -3,7 +3,6 @@ window.onload = () => {
     const accepted = localStorage.getItem("cookiesAccepted");
 
     if (!accepted) {
-        // Vis banneret kun hvis bruger ikke har valgt endnu
         banner.style.display = "flex";
     } else {
         banner.style.display = "none";
@@ -21,7 +20,6 @@ function declineCookies() {
 }
 
 window.onload = () => {
-    // Tjekker om brugeragenten indikerer mobiltelefon
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if (isMobile) {
