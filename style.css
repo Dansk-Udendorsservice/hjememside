@@ -234,6 +234,7 @@ footer {
     z-index: 2000;
 }
 
+/* Standard: hvide streger */
 .menu-toggle span {
     width: 100%;
     height: 3px;
@@ -242,6 +243,11 @@ footer {
     transition: all 0.3s ease;
     display: block;
     position: relative;
+}
+
+/* Når mobile-design er aktiv: gør streger mørke */
+.mobile-design .menu-toggle span {
+    background-color: #0f172a; /* Mørkeblå / næsten sort */
 }
 
 /* Når menu er aktiv (knappen kryds) */
