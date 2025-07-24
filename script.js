@@ -9,12 +9,10 @@ window.onload = () => {
 
 function acceptCookies() {
     localStorage.setItem("cookiesAccepted", "true");
-    document.getElementById("cookieText").innerHTML =
-        "Du har tilladt cookies – tak! <a href='cookie-policy.html'>Læs mere her.</a>";
-    setTimeout(() => {
-        document.getElementById("cookieBanner").style.display = "none";
-    }, 3000);
+    // Fjernet tekstopdatering
+    document.getElementById("cookieBanner").style.display = "none";
 }
+
 
 function declineCookies() {
     localStorage.setItem("cookiesAccepted", "false");
