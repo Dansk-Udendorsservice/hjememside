@@ -1,5 +1,5 @@
 window.onload = () => {
-    const banner = document.getElementById("cookieBanner");
+    const banner = document.getElementById("cookie-banner");
     const accepted = localStorage.getItem("cookiesAccepted");
 
     if (!accepted) {
@@ -11,12 +11,12 @@ window.onload = () => {
 
 function acceptCookies() {
     localStorage.setItem("cookiesAccepted", "true");
-    document.getElementById("cookieBanner").style.display = "none";
+    document.getElementById("cookie-banner").style.display = "none";
 }
 
 function declineCookies() {
     localStorage.setItem("cookiesAccepted", "false");
-    document.getElementById("cookieBanner").style.display = "none";
+    document.getElementById("cookie-banner").style.display = "none";
 }
 
 
