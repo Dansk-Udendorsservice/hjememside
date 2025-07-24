@@ -3,7 +3,9 @@ window.onload = () => {
     const accepted = localStorage.getItem("cookiesAccepted");
 
     if (!accepted) {
-        banner.style.display = "flex";
+        banner.style.display = "flex";  // Vis banneret hvis ikke valgt endnu
+    } else {
+        banner.style.display = "none";  // Skjul banneret hvis allerede valgt
     }
 };
 
@@ -14,8 +16,6 @@ function acceptCookies() {
 
 function declineCookies() {
     localStorage.setItem("cookiesAccepted", "false");
-    document.getElementById("cookieText").innerHTML =
-        "Du har afvist cookies. <a href='cookie-policy.html'>Læs om dine muligheder her.</a>";
     document.getElementById("cookieBanner").style.display = "none";
 }
 
