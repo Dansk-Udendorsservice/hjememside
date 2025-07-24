@@ -223,15 +223,15 @@ footer {
 
 /* Skjul menu-knap på desktop */
 .menu-toggle {
-    display: none;
+    font-size: 2.5rem;
     background: none;
     border: none;
-    font-size: 2rem;
     color: white;
     cursor: pointer;
+    display: none;
 }
 
-/* Vis knap på mobil (max-width 768px) */
+/* Vis på mobil */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
