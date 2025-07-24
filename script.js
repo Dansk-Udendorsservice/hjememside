@@ -3,7 +3,7 @@ window.onload = () => {
     const accepted = localStorage.getItem("cookiesAccepted");
 
     if (!accepted) {
-        // Vis banneret med flex (passer til din CSS flex-direction)
+        // Vis banneret kun hvis bruger ikke har valgt endnu
         banner.style.display = "flex";
     } else {
         banner.style.display = "none";
@@ -19,8 +19,6 @@ function declineCookies() {
     localStorage.setItem("cookiesAccepted", "false");
     document.getElementById("cookieBanner").style.display = "none";
 }
-
-
 
 window.onload = () => {
     // Tjekker om brugeragenten indikerer mobiltelefon
