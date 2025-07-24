@@ -1,23 +1,25 @@
 window.onload = () => {
-    const banner = document.getElementById("cookie-banner");
+    const banner = document.getElementById("cookieBanner");
     const accepted = localStorage.getItem("cookiesAccepted");
 
     if (!accepted) {
-        banner.style.display = "flex";  // Vis banneret hvis ikke valgt endnu
+        // Vis banneret med flex (passer til din CSS flex-direction)
+        banner.style.display = "flex";
     } else {
-        banner.style.display = "none";  // Skjul banneret hvis allerede valgt
+        banner.style.display = "none";
     }
 };
 
 function acceptCookies() {
     localStorage.setItem("cookiesAccepted", "true");
-    document.getElementById("cookie-banner").style.display = "none";
+    document.getElementById("cookieBanner").style.display = "none";
 }
 
 function declineCookies() {
     localStorage.setItem("cookiesAccepted", "false");
-    document.getElementById("cookie-banner").style.display = "none";
+    document.getElementById("cookieBanner").style.display = "none";
 }
+
 
 
 window.onload = () => {
