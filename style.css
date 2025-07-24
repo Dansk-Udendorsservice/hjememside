@@ -263,12 +263,13 @@ footer {
 }
 
 /* === Mobil og tablet navigation === */
+/* === Mobil og tablet navigation === */
 @media (max-width: 1024px) { /* Tablet og under */
     nav ul {
         flex-direction: column;
         gap: 0;
         display: none;
-        background-color: #0f172a;
+        background-color: #0f172a;  /* behold mørk baggrund som på desktop */
         position: absolute;
         top: 72px; /* juster efter header-højde */
         right: 0;
@@ -284,6 +285,8 @@ footer {
     header {
         padding: 20px 20px;
         position: relative;
+        background-color: #0f172a; /* sikrer mørk baggrund */
+        color: white; /* sikrer hvid tekst */
     }
     
     /* Vis menu toggle på mobil og tablet */
@@ -292,9 +295,26 @@ footer {
     }
 }
 
+/* === Mobil design specifikt (kan udbygges) === */
+.mobile-design body, 
+.mobile-design section, 
+.mobile-design footer {
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: #fff !important;
+    color: #0f172a !important;
+}
+
+/* Fjernet baggrunds- og farveskift på header i mobile-design */
+.mobile-design header {
+    padding: 15px 15px;
+    background-color: #0f172a !important; /* tving mørk baggrund */
+    color: white !important; /* tving hvid tekst */
+}
+
 /* Ekstra tablet-specifik styling */
 @media (min-width: 769px) and (max-width: 1024px) {
-    /* Lidt større menu-knap til tablet */
+    /* F.eks. lidt større menu-knap til tablet */
     .menu-toggle {
         width: 40px;
         height: 30px;
@@ -306,13 +326,10 @@ footer {
     nav ul {
         width: 250px; /* bredere menu til tablet */
     }
-}
-
-/* Fjernet alle .mobile-design farveændringer */
-
-/* Kun lidt kompakt header padding hvis ønsket */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 15px;
+    
+    /* Ændret padding og font-størrelse i mobile-design på tablet */
+    .mobile-design body {
+        font-size: 1.2rem;
+        padding: 15px;
     }
 }
