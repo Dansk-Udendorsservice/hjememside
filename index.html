@@ -53,6 +53,10 @@
       <h1 id="hero-title">Professionel haveservice – Vi skaber grønne oaser</h1>
       <p>Din have fortjener den bedste pleje. Vi hjælper med alt fra græsslåning til specialbeskæring, så du kan slappe af og nyde naturen.</p>
       <a href="#kontakt" class="btn-primary" aria-label="Kontakt os">Kontakt os i dag</a>
+      <!-- Scroll down pil -->
+      <div class="scroll-down" aria-hidden="true" style="margin-top: 2rem; font-size: 2rem; color: #2a9d8f; animation: bounce 2s infinite;">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
   </section>
 
@@ -70,12 +74,12 @@
     <h2 id="team-title">Teamet</h2>
     <div class="team-container">
       <article class="member" data-aos="zoom-in" data-aos-delay="200">
-        <h3>Liam <i class="fas fa-user-tie"></i></h3>
+        <h3>Liam <i class="fas fa-user-tie" title="Direktør"></i> <i class="fas fa-leaf" title="Specialist i beplantning"></i></h3>
         <p>Direktør & specialist i beplantning</p>
         <p>Liam elsker at skabe flotte haverum med fokus på bæredygtighed og kreativitet.</p>
       </article>
       <article class="member" data-aos="zoom-in" data-aos-delay="400">
-        <h3>Mads <i class="fas fa-user-tie"></i></h3>
+        <h3>Mads <i class="fas fa-user-tie" title="Direktør"></i> <i class="fas fa-tools" title="Maskinmester"></i></h3>
         <p>Direktør & maskinmester</p>
         <p>Mads sikrer, at alt maskineri kører perfekt, og at arbejdet altid udføres sikkert og effektivt.</p>
       </article>
@@ -94,6 +98,28 @@
     <p>Har du brug for en speciel opgave? Kontakt os for en uforpligtende snak.</p>
   </section>
 
+  <!-- Ny sektion: Call to action -->
+  <section id="gratis-konsultation" aria-labelledby="konsultation-title" data-aos="fade-up" data-aos-duration="1000" style="background-color: #e0f2f1; padding: 3rem 1rem; margin: 3rem 0; border-radius: 12px; text-align:center;">
+    <h2 id="konsultation-title">Få en gratis konsultation</h2>
+    <p>Er du i tvivl om, hvad din have har brug for? Book en gratis og uforpligtende konsultation med vores eksperter.</p>
+    <a href="#kontakt" class="btn-primary" aria-label="Book gratis konsultation">Book nu</a>
+  </section>
+
+  <!-- Ny sektion: FAQ -->
+  <section id="faq" aria-labelledby="faq-title" data-aos="fade-right" data-aos-duration="1200" style="max-width: 700px; margin: auto;">
+    <h2 id="faq-title">Ofte stillede spørgsmål</h2>
+    <dl>
+      <dt><strong>Tilbyder I faste aftaler?</strong></dt>
+      <dd>Ja, vi kan lave faste haveaftaler med regelmæssige besøg og pleje.</dd>
+
+      <dt><strong>Kan I klare specialopgaver?</strong></dt>
+      <dd>Absolut, vi tager gerne imod specialopgaver. Kontakt os for et tilbud.</dd>
+
+      <dt><strong>Hvordan håndterer I affald fra haven?</strong></dt>
+      <dd>Vi sørger for, at alt haveaffald bliver fjernet og genanvendt hvor muligt.</dd>
+    </dl>
+  </section>
+
   <section id="kontakt" aria-labelledby="kontakt-title" data-aos="fade-up" data-aos-duration="1000">
     <h2 id="kontakt-title">Kontakt os</h2>
     <p>Har du spørgsmål eller ønsker du et tilbud? Vi glæder os til at høre fra dig!</p>
@@ -105,41 +131,39 @@
   </section>
 </main>
 
-
-  <footer>
-    <div class="footer-logo-container">
-      <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img" loading="lazy" />
-    </div>
-    <p>© 2025 Dansk Udendørsservice – Alle rettigheder forbeholdes</p>
-    <p>CVR: Ukendt · Ukendt</p>
-    <p>
-      <a href="privatlivspolitik.html">Privatlivspolitik</a> · 
-      <a href="cookie-policy.html">Cookiepolitik</a>
-    </p>
-  </footer>
-
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
-    <p id="cookieText">
-      Vi bruger cookies for at forbedre din oplevelse –
-      <a href="cookie-policy.html">Læs vores Cookie & Privacy Policy.</a>
-    </p>
-    <div class="cookie-buttons">
-      <button onclick="acceptCookies()">Tillad cookies</button>
-      <button onclick="declineCookies()">Afvis cookies</button>
-    </div>
+<footer>
+  <div class="footer-logo-container">
+    <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img" loading="lazy" />
   </div>
+  <p>© 2025 Dansk Udendørsservice – Alle rettigheder forbeholdes.</p>
+  <div class="social-icons" aria-label="Følg os på sociale medier">
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    
-    const btn = document.getElementById("toTopBtn");
-    window.onscroll = () => {
-      btn.style.display = (window.scrollY > 300) ? "block" : "none";
-    };
-    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-  </script>
-  <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+  });
+
+  // Scroll to top button
+  const toTopBtn = document.getElementById('toTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      toTopBtn.style.display = 'block';
+    } else {
+      toTopBtn.style.display = 'none';
+    }
+  });
+  toTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Optional: Bounce animation keyframes in CSS could be added in your style.css
+</script>
+
 </body>
 </html>
