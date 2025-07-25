@@ -53,24 +53,3 @@ window.onload = () => {
         }
     }
 };
-
-    const cursor = document.getElementById('customCursor');
-
-    let mouseX = 0, mouseY = 0;
-    let posX = 0, posY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-
-    function animateCursor() {
-      // Langsom og clean bevægelse
-      posX += (mouseX - posX) * 0.07;
-      posY += (mouseY - posY) * 0.07;
-      cursor.style.left = posX + 'px';
-      cursor.style.top = posY + 'px';
-      requestAnimationFrame(animateCursor);
-    }
-
-    animateCursor();
