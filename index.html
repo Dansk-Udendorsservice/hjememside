@@ -3,16 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Vi tilbyder billig og professionel haveservice i dit lokalområde.">
+  <meta name="keywords" content="haveservice, græsslåning, hækklipning, teenagere, billig hjælp, dansk udendørsservice">
+  <meta name="author" content="Dansk Udendørsservice">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Dansk Udendørsservice">
+  <meta property="og:description" content="Vi passer din have, så du kan nyde den.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url" content="https://danskudendorsservice.dk">
+  <meta name="twitter:card" content="summary_large_image">
+
   <title>Dansk Udendørsservice</title>
+
+  <!-- Styles & Fonts -->
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Dark mode support -->
+  <meta name="color-scheme" content="light dark">
 </head>
 <body>
 
+  <!-- Back to top button -->
+  <button id="toTopBtn" aria-label="Tilbage til toppen"><i class="fas fa-chevron-up"></i></button>
+
   <header>
     <div class="logo-container">
-      <img src="logo.png" alt="Dansk Udendørsservice Logo" class="logo-img" />
+      <img src="logo.png" alt="Dansk Udendørsservice Logo" class="logo-img" loading="lazy" />
       <span class="logo-text">Dansk Udendørsservice</span>
     </div>
     <nav id="primary-navigation" aria-label="Primær navigation">
@@ -28,32 +49,32 @@
 
   <main>
     <section class="hero" id="forside" aria-labelledby="hero-title">
-      <div class="overlay">
+      <div class="overlay" data-aos="fade-up">
         <h1 id="hero-title">Professionel haveservice</h1>
         <p>Vi passer din have, så du kan nyde den.</p>
       </div>
     </section>
 
-<section id="om" aria-labelledby="om-title">
-  <h2 id="om-title">Hvem er vi?</h2>
-  <p>Vi er en lille gruppe teenagere, der gerne vil tjene lidt ekstra penge ved at hjælpe folk med praktiske opgaver som græsslåning, hækklipning og andet udendørsarbejde. Vi er ikke professionelle, men vi gør vores bedste, arbejder hårdt og sørger for at give en god oplevelse. Hvis du har brug for en hjælpende hånd i haven, står vi klar!</p>
-</section>
+    <section id="om" aria-labelledby="om-title" data-aos="fade-right">
+      <h2 id="om-title">Hvem er vi?</h2>
+      <p>Vi er en lille gruppe teenagere, der gerne vil tjene lidt ekstra penge ved at hjælpe folk med praktiske opgaver som græsslåning, hækklipning og andet udendørsarbejde. Vi er ikke professionelle, men vi gør vores bedste, arbejder hårdt og sørger for at give en god oplevelse. Hvis du har brug for en hjælpende hånd i haven, står vi klar!</p>
+    </section>
 
-    <section id="team" aria-labelledby="team-title">
+    <section id="team" aria-labelledby="team-title" data-aos="fade-up">
       <h2 id="team-title">Teamet</h2>
       <div class="team-container">
         <article class="member">
           <h3>Liam</h3>
-          <p>Direktør</p>
+          <p><i class="fas fa-user-tie"></i> Direktør</p>
         </article>
         <article class="member">
           <h3>Mads</h3>
-          <p>Direktør</p>
+          <p><i class="fas fa-user-tie"></i> Direktør</p>
         </article>
       </div>
     </section>
 
-    <section id="priser" aria-labelledby="priser-title">
+    <section id="priser" aria-labelledby="priser-title" data-aos="fade-left">
       <h2 id="priser-title">Priser</h2>
       <ul>
         <li><strong>Græsslåning:</strong> fra 200 kr.</li>
@@ -63,7 +84,7 @@
       </ul>
     </section>
 
-    <section id="kontakt" aria-labelledby="kontakt-title">
+    <section id="kontakt" aria-labelledby="kontakt-title" data-aos="fade-up">
       <h2 id="kontakt-title">Kontakt os</h2>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:danskudservice@gmail.com">danskudservice@gmail.com</a></li>
@@ -75,7 +96,7 @@
 
   <footer>
     <div class="footer-logo-container">
-      <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img" />
+      <img src="logo.png" alt="Dansk Udendørsservice Logo" class="footer-logo-img" loading="lazy" />
     </div>
     <p>© 2025 Dansk Udendørsservice – Alle rettigheder forbeholdes</p>
     <p>CVR: Ukendt · Ukendt</p>
@@ -96,6 +117,17 @@
     </div>
   </div>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    
+    const btn = document.getElementById("toTopBtn");
+    window.onscroll = () => {
+      btn.style.display = (window.scrollY > 300) ? "block" : "none";
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
