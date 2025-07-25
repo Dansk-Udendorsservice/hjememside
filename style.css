@@ -21,7 +21,21 @@ body {
   background-color: var(--light-bg);
   color: var(--primary-text);
   line-height: 1.6;
+  cursor: none;
 }
+
+    .cursor {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: var(--cursor-color, rgba(255, 0, 100, 0.6));
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s ease;
+    }
 
 header {
   background-color: var(--primary-bg);
