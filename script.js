@@ -54,7 +54,7 @@ window.onload = () => {
     }
 };
 
-    const cursor = document.getElementById('custom-cursor');
+    const cursor = document.getElementById('customCursor');
 
     let mouseX = 0, mouseY = 0;
     let posX = 0, posY = 0;
@@ -64,12 +64,13 @@ window.onload = () => {
       mouseY = e.clientY;
     });
 
-    function animate() {
-      posX += (mouseX - posX) * 0.1;
-      posY += (mouseY - posY) * 0.1;
-      cursor.style.left = `${posX}px`;
-      cursor.style.top = `${posY}px`;
-      requestAnimationFrame(animate);
+    function animateCursor() {
+      // Langsom og clean bevægelse
+      posX += (mouseX - posX) * 0.07;
+      posY += (mouseY - posY) * 0.07;
+      cursor.style.left = posX + 'px';
+      cursor.style.top = posY + 'px';
+      requestAnimationFrame(animateCursor);
     }
 
-    animate();
+    animateCursor();
