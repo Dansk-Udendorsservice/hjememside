@@ -8,10 +8,6 @@
   --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.06);
   --font-main: 'Poppins', sans-serif;
-  --cursor-size: 24px;
-  --cursor-border: 2px;
-  --cursor-color: white;
-  --cursor-border-color: black;
 }
 
 * {
@@ -25,25 +21,8 @@ body {
   background-color: var(--light-bg);
   color: var(--primary-text);
   line-height: 1.6;
-  cursor: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+  cursor: url('cursor.png') 0 0, pointer;
 }
-
-    .custom-cursor {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: var(--cursor-size);
-      height: var(--cursor-size);
-      border-radius: 50%;
-      background-color: var(--cursor-color);
-      border: var(--cursor-border) solid var(--cursor-border-color);
-      pointer-events: none;
-      z-index: 999999;
-      transform: translate(-50%, -50%);
-      transition: background-color 0.2s ease;
-    }
 
 header {
   background-color: var(--primary-bg);
