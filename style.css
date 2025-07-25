@@ -83,17 +83,20 @@ nav a:hover {
 #gratis-konsultation {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centrerer vertikalt indhold i boksen */
-  align-items: center;     /* centrerer horisontalt indhold i boksen */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  height: auto; /* Brug automatisk højde så indholdet bestemmer højden */
-  max-width: 600px;
-  margin: 3rem auto; /* centrer boksen i midten af sektionen */
+
+  width: 100%;
+  max-width: 700px;
+  margin: 3rem auto; /* centrer horisontalt */
   padding: 2rem;
+
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 
 #kontakt {
   text-align: center;
